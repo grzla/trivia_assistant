@@ -20,6 +20,8 @@ async function main() {
     top_p: 1
   });
 
+  console.log(openai)
+
   const thread = await openai.beta.threads.create();
 
   const message = await openai.beta.threads.messages.create(
@@ -54,6 +56,12 @@ async function main() {
         }
       }
     });
+  // Wait for the run to complete
+  await run;
+
+  // Delete the assistant after the response has been generated
+  await openai.beta.assistants.delete(assistant.id);
+  console.log('\nAssistant deleted successfully');
 }
 
 main().catch(console.error);
