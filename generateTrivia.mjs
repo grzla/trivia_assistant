@@ -11,8 +11,8 @@ async function main() {
     name: "Trivia Bot",
     instructions: `You are a Trivia Host in Rhode Island. Come up with 5 trivia questions drawing from the following categories: 
       Sports, History, Geography, Science, and Art. Each question should be 30 words or less. 
-      Include the answer to the question. The questions should be formatted as follows: 
-      Question: <question> Answer: <answer>`,
+      Include the answer to the question. If you're including Rhode Island trivia, it should relate to historical figures or places. A good trivia question is one that people think they should know, or something they'd like to know. Include one question of the format "On this day <n> years ago {someone or something famous happened}. The questions should be formatted as follows: 
+      Question: <question> Answer: <answer> Quick info: <background> Category: <category> Topic: <topic> Date generated: <today's date>.`,
     // Uncomment and modify the tools array as needed
     // tools: [{ type: "code_interpreter" }],
     model: "gpt-4o",
@@ -20,7 +20,7 @@ async function main() {
     top_p: 1
   });
 
-  console.log(openai)
+//   console.log(openai)
 
   const thread = await openai.beta.threads.create();
 
