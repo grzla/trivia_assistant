@@ -59,9 +59,16 @@ async function main() {
   // Wait for the run to complete
   await run;
 
-  // Delete the assistant after the response has been generated
-  await openai.beta.assistants.delete(assistant.id);
-  console.log('\nAssistant deleted successfully');
+    // if run is complete, delete the assistant
+    while (run.status !== 'complete') {
+      await new Promise(resolve => setTimeout(resolve, 1000));
+    }
+   const response = await openai.beta.assistants.del(assistant.id);
+
+    console.log(response);
+    console.log('hello from EOF')
+//     await openai.beta.assistants.delete(assistant.id);
+//     console.log('\nAssistant deleted successfully');
 }
 
 main().catch(console.error);
