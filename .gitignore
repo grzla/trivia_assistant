@@ -6,6 +6,9 @@
 .pnp.js
 .yarn/install-state.gz
 
+# training/fine-tuning
+/training
+
 # testing
 /coverage
 
@@ -35,4 +38,4 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-*.py
+

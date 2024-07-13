@@ -55,18 +55,22 @@ async function main() {
           });
         }
       }
+      console.log(`Deleting Assistant`);
+      openai.beta.assistants.del(assistant.id);
+
     });
   // Wait for the run to complete
-  await run;
+//   await run;
 
-    // if run is complete, delete the assistant
-    while (run.status !== 'complete') {
-      await new Promise(resolve => setTimeout(resolve, 1000));
-    }
-   const response = await openai.beta.assistants.del(assistant.id);
+//     // if run is complete, delete the assistant
+//     while (run.status !== 'complete') {
+//       await new Promise(resolve => setTimeout(resolve, 1000));
+//       console.log(`Run status: ${run.status}`);
+//     }
+//    const response = await openai.beta.assistants.del(assistant.id);
 
-    console.log(response);
-    console.log('hello from EOF')
+//     console.log(response);
+//     console.log('hello from EOF')
 //     await openai.beta.assistants.delete(assistant.id);
 //     console.log('\nAssistant deleted successfully');
 }
