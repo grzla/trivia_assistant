@@ -1,4 +1,6 @@
 import 'dotenv/config';
+
+
 import OpenAI from 'openai';
 
 // Ensure your OPENAI_API_KEY is loaded from .env
@@ -6,21 +8,23 @@ const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY,
 });
 
-async function main() {
-  const assistant = await openai.beta.assistants.create({
-    name: "Trivia Bot",
-    instructions: `You are a Trivia Host in Rhode Island. Come up with 5 trivia questions drawing from the following categories: 
-      Sports, History, Geography, Science, and Art. Each question should be 30 words or less. 
-      Include the answer to the question. If you're including Rhode Island trivia, it should relate to historical figures or places. A good trivia question is one that people think they should know, or something they'd like to know. Include one question of the format "On this day <n> years ago {someone or something famous happened}. The questions should be formatted as follows: 
-      Question: <question> Answer: <answer> Quick info: <background> Category: <category> Topic: <topic> Date generated: <today's date>.`,
-    // Uncomment and modify the tools array as needed
-    // tools: [{ type: "code_interpreter" }],
-    model: "gpt-4o",
-    temperature: 1,
-    top_p: 1
-  });
+const assistantId = 'asst_Nofkeq4hkpSru536oeympqrQ'
+const prompt = `You are a Trivia Producer in Rhode Island. Your job is to come up with 30 questions per game. The first 10 questions are Pop Culture. The next set of questions are General Knowledge. The last set of questions is the Bonus Round, in which the questions are intentionally more difficult.`
 
-//   console.log(openai)
+async function main() {
+
+  // const assistant = await openai.beta.assistants.create({
+  //   name: "Trivia Bot",
+  //   instructions: `${prompt}`,
+  //   tools: [{ type: "file_search" }],
+  //   model: "gpt-4o",
+  //   temperature: 1,
+  //   top_p: 1
+  // });
+
+  const assistant = await openai.beta.assistants.retrieve(assistantId);
+
+  console.log(assistant);
 
   const thread = await openai.beta.threads.create();
 
@@ -55,24 +59,11 @@ async function main() {
           });
         }
       }
-      console.log(`Deleting Assistant`);
-      openai.beta.assistants.del(assistant.id);
-
     });
-  // Wait for the run to complete
-//   await run;
 
-//     // if run is complete, delete the assistant
-//     while (run.status !== 'complete') {
-//       await new Promise(resolve => setTimeout(resolve, 1000));
-//       console.log(`Run status: ${run.status}`);
-//     }
-//    const response = await openai.beta.assistants.del(assistant.id);
+  // not-streaming example: https://platform.openai.com/docs/assistants/tools/file-search/step-5-create-a-run-and-check-the-output
+  }
 
-//     console.log(response);
-//     console.log('hello from EOF')
-//     await openai.beta.assistants.delete(assistant.id);
-//     console.log('\nAssistant deleted successfully');
-}
+  
 
 main().catch(console.error);

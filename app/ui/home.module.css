@@ -1,0 +1,12 @@
+.shape {
+    height: 0;
+    width: 0;
+    border-bottom: 50px solid black;
+    border-left: 40px solid red;
+    border-right: 20px solid red;
+    border-top: 30px solid black
+  }
+
+.large-font {
+    font-size: 20px;
+}
