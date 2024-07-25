@@ -17,7 +17,6 @@ export default function Home() {
   // Use the assistant hook, passing the assistantId
   const { messages, input, submitMessage, handleInputChange } = useAssistant({
     api: "/api/assistant",
-    threadId: ASSISTANT_ID,
   });
 
   const formRef = useRef<HTMLFormElement>(null);
@@ -56,11 +55,7 @@ export default function Home() {
             className="absolute top-1/2 transform -translate-y-1/2 right-4 rounded-full"
           >
             {" "}
-            <div className="leading-none">
-              {"oh"}
-              <br />
-              {"fuck"}
-            </div>
+            <div className="leading-none">{"Go"}</div>
             {/* <Send size={24} /> */}
           </Button>
         </form>

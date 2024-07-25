@@ -34,15 +34,29 @@ for root, dirs, files in os.walk(root_directory_path):
             # Find the game's date
             game_date = find_games_date(prs)
             
+
             # Extract text from slides 1, 3, and 5
             text_to_save = f"Game Date: {game_date}\n\n"  # Prepend the game's date
             for i in [0, 2, 4]:  # Slide numbers are 0-indexed in python-pptx
                 if i < len(prs.slides):
                     slide_text = extract_text_from_slide(prs.slides[i])
+                    if i == 2:  # Check if it's slide 3
+                        questions = slide_text.split('\n')  # Assuming questions are separated by newlines
+                        if len(questions) > 10:  # Check if there are more than 10 questions
+                            questions = questions[:10]  # Keep only the first 10 questions
+                        slide_text = '\n'.join(questions)  # Rejoin the questions into a single string
                     if i == 4:  # Check if it's slide 5
                         slide_text = "Bonus Round\n" + slide_text
                     text_to_save += slide_text + "\n\n"
             
+            # # Extract text from slides 1, 3, and 5
+            # text_to_save = f"Game Date: {game_date}\n\n"  # Prepend the game's date
+            # for i in [0, 2, 4]:  # Slide numbers are 0-indexed in python-pptx
+            #     if i < len(prs.slides):
+            #         slide_text = extract_text_from_slide(prs.slides[i])
+            #         if i == 4:  # Check if it's slide 5
+            #             slide_text = "Bonus Round\n" + slide_text
+            #         text_to_save += slide_text + "\n\n"
             # Define the output file path
             output_file_path = os.path.join(output_directory_path, os.path.splitext(file)[0] + '.txt')
             

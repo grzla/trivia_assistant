@@ -1,0 +1,367 @@
+So you said, I wasn't thinking, you know, this, this, this assistant that I worked on.
+Which app is this, by the way?
+That is called, I'll tell you after, it's, it's like, it's, it's my favorite one.
+Oh, AudioShare, there we go.
+So this app was, was just something that I was, you know, it was, I felt it was a good application for the assistant, you know, API that we're learning.
+I had mentioned that I work for an entertainment company.
+We do, well, among the games that we, that we host are, you know, we host, I'm listening, that one there, right?
+Yep.
+We host trivia games.
+And like I said, my boss, you know, he's the owner, he spends a thousand dollars a month to make the game.
+So I wasn't thinking that this was going to be my startup idea.
+But you said that's Signal.
+So I'm willing to think of it that way.
+If you could help me maybe develop the idea and see how.
+Did you have a number two idea?
+I have, I had several ideas.
+Let's see.
+The other night I was thinking, like, what's, what's one thing that hasn't changed in a long time?
+And, you know,
+If I play, if I play, if I play this.
+Wait, wait, keep going.
+I think I have it.
+Why do I know this song?
+Why do you know this song?
+Because you've heard it on hold a million times.
+What?
+On hold.
+Okay.
+I think it's interesting that we live in a world that's so rich with media and music coming out our ears everywhere.
+But why is, why is that the song?
+Well, it has something to do, I read the story, you know, it's got something to do with this guy being in the right place at the right time.
+And, you know, it just comes, they needed some relative free music.
+It comes with the, with the system, you know.
+And, you know, and, but now we're, now we're at the point where you can, I mean, you can, I don't know if you've seen,
+I might have to pause this.
+Let's see what happens if I can hold.
+Alright, I like it.
+So it's not an opportunity for companies to really brand or to have a little more fun.
+Alright.
+The song is doing is, it's, it's almost a parody on itself.
+Yeah.
+And for the people that are waiting, I'm no longer tortured by what I'm listening to.
+Music as a service, somehow if, and I have no idea how this, you know, how these IVR systems, you know, I don't know like how they, where the music gets plugged into it, you know, like,
+but it seems like there's an opportunity there for, again, you know, companies always, like, everything's branded, like every which way, like everywhere you look, it's branded except for when you call and you're on hold.
+So if I am, let me give an example of someone I was on hold with recently.
+JP Morgan Chase, I was on hold, I had to make a call.
+If instead of hold music I was on a commercial that is actually a song.
+I'm hearing a song but it's really a commercial.
+Right. That's, that's a definite possibility, right?
+That's where I'm thinking that this is, because I'm like, I had to get really specific, I'm on hold with JP Morgan Chase.
+I don't want to play ads for my competitors or for a restaurant, Capital Grill, unless Capital Grill is paying me to have this cute little jingle of,
+or.
+It could be a commercial. These companies have an opportunity, it's like, hey, we have, we get so many calls per day and we'll play, they're on hold as a capital audience.
+So you could actually just play an on hold commercials.
+You could totally do on hold commercials and they, maybe there's, I hate how advertising is in everything.
+There's like no safe space.
+Right.
+But, but yeah.
+So now, the biggest barrier is, do you try to get in with the existing equipment, equipment that they're using in their phone systems?
+Because you call it IVR?
+Yeah.
+What's it called? Interactive voice response, I think.
+Okay.
+And, or do you try to get your own, or is it something that they can, do they have control over what MP3 files they, MP3 files?
+They do, they have, there's, you know, I haven't seen the panel.
+I don't know how to, how it gets configured, you know, but I know that there's, you know, because there's, there's at least one other song that comes in the, you know, comes with the install that you can, that you can select.
+And I know, and just the bit of research I've done on this, I know there's, there's the possibility to do streaming music, you know, to hold, I just, I'm not sure why it seems like nobody's doing it.
+Maybe there's a, maybe it can be made easier to do.
+And again, I think putting that, that, the prospect of branding, entertaining your customers, selling to them while they're waiting.
+Did you know? So here's something essentially.
+I, when I'm in an elevator, and they have those news things going by, they have screens in there.
+I love those things. I have so many photos of, because one, I hate reading it and then it switches.
+I'm like, dang it.
+So that's something that, that's, here's a signal from what you're talking about.
+When I get in there, as soon as I get in the elevator, and I see it, I take a photo of it, and I'll try to read it.
+And then if it changes, like two seconds later, I don't feel like, man, I missed out. What was that going to say?
+Number one.
+Imagine an audio QR code.
+You know, the QR code is yes.
+But imagine anytime someone is listening to anything, that there's a subtle audio playing in the background.
+That if you scan it with your app, like, oh, for more information, just turn on, you know, QR audio right now.
+So I'm all over the place right now, but I think we're going to bring it back for a circle.
+I can tell you that Shazam does that.
+Does what?
+Shazam does what you're talking about.
+Yeah, so Shazam does it with regular music.
+It does it with anything.
+Anybody who wants to have their content recognized can submit it.
+Right.
+And so what I'm thinking is that you have an almost imperceptible series of sounds so that if they're playing regular,
+let's say I was on the phone with JP Morgan Chase, or I'm in an elevator and they're playing music,
+they're like, oh, you know, we have a special deal going or there's a special airline flight that's ba ba ba ba ba ba ba ba boom.
+And if I hear that, I'm like, man, I want information on that.
+All I have to do is take out the Greg QR audio app and then just tap it.
+And even though they're talking about a commercial, because in that background, there's a certain series of almost humanly imperceptible sounds.
+No, I get what you're saying.
+And then now what that does, it can lead me to this URL.
+Tomorrow, I can lead them to that URL because I can change the overlay.
+The commercial is playing, but now there's an overlay of signal that's in the background that the human won't.
+It won't. Do you see what I'm saying there?
+I do. Yeah.
+And so now with now you don't have to change the elevator music.
+You can because now I think they should.
+I think everyone know what you put on hold music after speaking with what you're saying.
+If I'm on hold, they should be talking about, hey, have you tried the new JP Morgan Chase this card?
+Or if I'm in the elevator at CIC, why don't they have music playing in there?
+They go, have you? Did you know what this event taking place at CIC on Thursday nights?
+Right now they put what? Super pieces of paper up, right?
+When they can have that playing.
+And now for this app, I can have your app running in the background all day.
+So no matter where I am, if I'm in a place that's picking that layered commercial up, then it's just like, you know, you can do auto Shazam.
+Yeah. And no matter where I go now, it's just picking up songs.
+I get home and I'm like, oh, yeah, yeah, yeah.
+Yeah. So now I'll have to keep doing what? Pulling this out.
+Customize ads. Yes. On hold. Great.
+Let's take it one step further. That there is.
+If people are listening, they can use their phone.
+Put it on speakerphone.
+We're actually know now, like for instance, you know, like the new iPhone software is coming out in September.
+It will transcribe every call that you're on. Text for it.
+So it's listening for every call, right?
+They're like, we've already been doing it now.
+We're just letting you do it because Congress is going to get mad if we don't share it with you.
+And so now when you're on hold.
+If your app is playing in the background, it's recording every conversation.
+And I think that that could play anywhere.
+Even. Go on.
+That just reminds me of something.
+Imagine this at a nightclub. I'm going to go crazy now.
+At a nightclub, people are listening to music.
+And now the club can print this subtle.
+Series of words in the background and then your app that they have opened or drink specials are going on right now.
+I see what you're saying. Right.
+So I go drink specials are going on right now.
+Oh, even though the clip, the song is what?
+What's that song right now? A Million Dollar Baby.
+You heard that song?
+I think probably.
+Yeah. Or any song.
+It could be playing on a radio anywhere.
+You could be out at.
+Oh, man, there's so many so many.
+Options now where you have this overlay advertising.
+Can we call overlay ads?
+Playing anywhere where someone wants to.
+OK, you're listening to one thing, so it doesn't have to be a specific ad now.
+So I see I see what you're talking about in like a nightclub because, you know, they have they want to drive drink sales and, you know.
+But what would the application be on like if it was on the radio?
+Yes, so now you're driving your car.
+You're listening to the radio and you have the Greg audio overlay app playing.
+And the app automatically registers thing.
+You know, we picked up a overlay.
+And you're like, oh, so because then you're like, oh, I'm listening to this ad.
+Oh, man, I want to find out what the right because it's stupid commercial.
+So on the radio, how do I remember what it is?
+But now, since I've been listening to it, it automatically will change.
+It will chime. I just received a new overlay.
+And now that is stories.
+So now you can go back later on and get what that ad was saying on the radio.
+So that's for radio stations. Great TV shows.
+TV commercials. I'm watching a TV commercial.
+Great Super Bowl commercial. You're watching it.
+OK, this was great.
+And now the ad shows up on my phone just by listening to the commercial
+and with the website URL that they want me to see.
+The next time that that ad plays, they may send me to a different location.
+So and I guess you could see adoption being maybe not being a hard sell
+because it's yet another channel for them to monetize.
+And it helps to take something that's very analog and convert it to what?
+Digital. Yeah.
+Analog radio, analog TV commercials.
+So do you think, again, being that people already have their ads thrown at them every minute of the day,
+you know what I hate the most is when you go to the gas station.
+When that gas thing is.
+I'm like, no, just.
+Second button. Yeah, right.
+But do people want to?
+How concerning is it that people aren't don't have a feed that logs whatever ads they heard?
+You know, like how I can I can see the use for it, you know, but.
+You know, if I have the app open, you know, I'm going to get I'm going to get every ad that I heard shown on there today.
+And, you know, I'm going to get, you know, Kia Automall.
+I'm going to get, you know, all the other ads that I know that I hear.
+It almost makes you like more aware of like how much advertising you're kind of like subject to.
+Yes. But how does what's Google's greatest source of revenue?
+And Facebook's ads, ads, ads, ads, ads, ads, ads, ads, ads, ads, ads.
+And yet, when you think of Google, you don't think, well, this company bombards me with ads.
+But they're all selling ads in a very stealthy manner.
+They're not selling ads to you. They're selling ads to companies that want to utilize your data.
+And on Twitter, you'll see an ad from time to time.
+But I think that you have something here that's potentially much, much, much bigger than the trivia.
+I wouldn't abandon trivia because it's a signal and it's money attached to it.
+And you'll get some experience from it.
+And it's typically something that you can do 60% of your time devoted to the Greg QR audio.
+I'm just using it as a name, a very bad name, by the way, except for Greg.
+And then you can spend 40% of your time working on the trivia thing.
+And that way, you can start getting some immediately money coming in and get the practice of entrepreneurial exercise, doing that.
+So I guess we have another, I'll start looking into maybe some, am I deciding on this right now or do we want to talk about it anymore?
+I think I'm excited.
+And there's not too often, like even with Dante's just talking, he was going in one direction.
+And I think by the end of it, we were like, all right, I think this is really exciting.
+That's not bad, but you have to fight the belly of the monster to try to get in that door.
+Whereas with you, you can start this with small businesses that are playing ads and their music and their stories, right?
+You can say, you could play your music, just set up another set of speakers and play this while those are playing.
+This is on loop, right?
+So you don't even have to integrate into the current system.
+We can play it.
+We can have two inputs onto these speaker systems.
+So now you have your ads playing, your QR overlay ads, your QR audio ads.
+So the people in the store, they can start saying, OK, hey, what are the specials?
+What are the deals in the store?
+So now I go into a store and I'm expecting to take out my Greg QR audio app and I can see what the specials are.
+What's really cool? What's awesome?
+Stop and shop, a grocery store, walking in.
+Hey, what are the specials right now?
+It's Indian music.
+It could even be on individual aisles.
+Correct.
+Individual aisles could have a speaker here.
+And people could even, they could be like a little audio symbol when they put their phone next to it.
+It shows up that way.
+But then you could also have the, what do you call those things?
+NFCs.
+Yeah.
+Near Field.
+Near Field Communications, yes.
+Those little stickers, paper things.
+So those could be there.
+So you could have, you could say, hey, we could do it with audio.
+We could do it with just something you could walk by in your stores.
+We could do it there.
+The audio is great because if you want to change the deal, you have to go out and change the NFCs.
+Well, not necessarily because where that NFC leads you, you can print whatever you want to show up there and display.
+You could change whatever that page is.
+So.
+Now, couldn't that also be done with like a geofence?
+Right.
+So if somebody's inside of a club, they have a geofence.
+And so your app could use all three other, all the above.
+We could use geofence, got this to do this.
+We could do this.
+If somebody's in your store, the app is going to show them, OK, hey, they're going to get this deal, this deal, this deal.
+And.
+The great thing about the music is that they're playing in a commercial.
+Hey, welcome to Marshall's.
+Just to let you know, we have a really great deal right now.
+Blah, blah, blah, blah, blah, blah.
+So they're hearing it versus it just showing up on there.
+You know what I mean?
+Yeah. Yeah, yeah.
+So they have a song playing in between every other song.
+They can play an ad.
+You know, if you want to get this deal, just open up the great QR audio app.
+Yeah.
+And turn it on and you'll get the latest deal on this, that and the third.
+But yeah, geofence.
+Absolutely.
+Geofence, near field communication, audio overlay.
+Interesting.
+So now.
+Where do we start?
+When you first came in, you were talking about this being what?
+Is working with these IVR systems, right?
+Yeah.
+And then playing customized music and just bringing life and character and,
+you know.
+A better experience.
+And so I switched it immediately saying, let's monetize this.
+Let's create a monetized option here so you can still bring better music
+and quality there.
+That can be done.
+So if you still want to hit that avenue, you can do that.
+But now you have this overlay technology that's there that helps companies and
+people not just monetize, but to inform.
+Right.
+Yeah, there's a couple interesting ideas there.
+And the geofence thing could be if I have my app open, you could.
+Crazy ideas are great.
+If I have my app open, I'm traveling.
+You could have companies that buy streets and miles on the highway.
+So now if I have the Greg overlay app open, if you were traveling, you know,
+ding, notification.
+Because sometimes Waze, have you seen that on Waze when they try to start
+advertising?
+Yeah.
+And there's really no, for the user, they don't see a map.
+I never see the map.
+But as I'm traveling, if I have that app open, I could say turn off geofence
+maps, you know, ads.
+You could turn them, turn off different things like that.
+So if I don't want to be bombarded with every mile, there's a new ad showing
+up.
+But imagine the people that would bid for Times Square.
+You have an app that's already connected to all these advertising channels and
+people that want to advertise.
+And now you're saying, hey, since people are already using my app when they go
+from place A to B, when they're in Times Square, would you like your ads to
+show up?
+Man, how do you get people to install that?
+By giving value to the businesses that are around that says, okay, as soon as
+they walk into the store, they're now free.
+The store owns that.
+Or you could say, hey, do you want to advertise when people are in your store?
+Yes?
+Great.
+No?
+Then your competition is going to advertise.
+Every time somebody walks into McDonald's, you're going to see a Burger King ad
+on this app.
+You sure you don't want to own this in my app?
+I think we're in some interesting territory there.
+Times Square, who wouldn't want to?
+Oh, I want this part of Times Square.
+I want this part of Times Square.
+I can't believe this is not a thing already.
+Yeah.
+I think it's like kind of crazy.
+And the augmented, as these augmented glasses become everywhere.
+So I'm thinking down the road.
+Oh, yeah.
+So now when people have augmented glasses, now you have this, now you build your app
+into these augmented glasses.
+So now people are missing these virtual billboards.
+Well, see, the augmented glasses, we already knew that was going to, or is going to
+happen with the VR stuff, but it hasn't become, it's just, I mean, isn't Facebook
+not going to make it anymore?
+They're not going to make the Oculus anymore or something like that.
+Really?
+I think I just heard that because it's not, it just hasn't caught on.
+And they changed their entire name to Meta because they thought this was going to be
+the biggest thing, and now they're wishing that they changed it to AI instead of Meta.
+That's why you don't really trace trends.
+So I think we're good for it now.
+You have a lot.
+Take this, upload it, and have any chat, GPT or whatever.
+Say, take all my notes from here and print it into a Google document for me.
+Okay.
+So what is my, what is the next step?
+You need to take this and crystallize what is really resonating with you from this conversation
+and say, okay, we have something.
+It's like, you know, that lump of dough is beginning to look like a pizza, right?
+We're smoothing it out.
+It was a lump of dough in the beginning.
+And now you're really being, it's okay.
+Let me write this out.
+What are all the ideas here?
+And then from all these ideas, what's the first rung of this ladder?
+I don't want to start with the 50th rung.
+That's way too high.
+I have to print, to build this, I have to put a rung here and then a rung here.
+So what's the easiest thing at the bottom to start with in building?
+And let me start talking to customers.
+This is so new and so novel.
+It could be that Airbnb and Uber thing where everybody thinks you're crazy.
+Right.
+So that's your reason why customers tell you you're crazy.
+Because you're from the future or you're from the past.
+And you just have to figure out which one, why they tell me I'm crazy,
+because I'm from the future or because I'm a dinosaur.
+And I think from there, I think, and we haven't spent much time talking about,
+I don't remember what the other one was anymore, the trivia thing.
+Because I'm very, very interested.
+And even for myself, this could be insane or it could just be insane.
+Right.
+Wow, this is insane.
+No, that was just insane.
+Literally insane.
+All right.
