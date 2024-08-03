@@ -1,99 +1,28 @@
-import { AssistantResponse } from 'ai';
 import { NextRequest, NextResponse } from 'next/server';
-import OpenAI from 'openai';
-
-// Create an OpenAI API client (that's edge friendly!)
-const openai = new OpenAI({
-  apiKey: process.env.OPENAI_API_KEY || '',
-});
-
-// Allow streaming responses up to 30 seconds
-export const maxDuration = 30;
-
-const homeTemperatures = {
-  bedroom: 20,
-  'home office': 21,
-  'living room': 21,
-  kitchen: 22,
-  bathroom: 23,
-};
+import { createThreadIfNeeded, createMessage, runAssistant, getResponseMessages, extractTriviaResponse } from '@/lib/assistantHandler';
 
 export async function POST(req: NextRequest) {
   try {
     // Parse the request body
-    const input: {
-      threadId: string | null;
-      message: string;
-    } = await req.json();
-
+    const input: { threadId: string | null; message: string } = await req.json();
+    console.log('Input:', input);
     // Create a thread if needed
-    const threadId = input.threadId ?? (await openai.beta.threads.create({})).id;
+    const threadId = await createThreadIfNeeded(input.threadId);
+    console.log('Thread ID:', threadId);
+    // Add a message to the thread with the prompt for generating trivia questions
+    const createdMessage = await createMessage(threadId, input.message);
+    console.log('Created message:', createdMessage);
 
-    // Add a message to the thread
-    const createdMessage = await openai.beta.threads.messages.create(
-      threadId,
-      {
-        role: 'user',
-        content: input.message,
-      },
-      // { signal: req.signal },
-    );
-
-    // Run the assistant on the thread
-    const run = await openai.beta.threads.runs.create(threadId, {
-      assistant_id:
-        process.env.OPENAI_ASSISTANT_ID ??
-        (() => {
-          throw new Error('ASSISTANT_ID is not set');
-        })(),
-    });
-
-    type Run = {
-      id: string;
-      // type: "string union" or "string literal" 
-      status: 'queued' | 'in_progress' | 'requires_action' | 'cancelling' | 'cancelled' | 'failed' | 'completed' | 'expired';
-    };
-
-    // Poll for run completion
-    async function waitForRunCompletion(run: Run): Promise<Run> {
-      while (run.status === 'queued' || run.status === 'in_progress') {
-        await new Promise((resolve) => setTimeout(resolve, 500));
-        run = await openai.beta.threads.runs.retrieve(threadId, run.id) as Run;
-      }
-
-      if (
-        run.status === 'cancelled' ||
-        run.status === 'cancelling' ||
-        run.status === 'failed' ||
-        run.status === 'expired'
-      ) {
-        throw new Error(`Run status: ${run.status}`);
-      }
-
-      return run;
-    }
-
-    await waitForRunCompletion(run as Run);
+    // Run the assistant on the thread and wait for completion
+    await runAssistant(threadId);
 
     // Get the response messages
-    const responseMessages = (
-      await openai.beta.threads.messages.list(threadId, {
-        after: createdMessage.id,
-        order: 'asc',
-      })
-    ).data;
-    console.log(responseMessages);
-
+    const responseMessages = await getResponseMessages(threadId, createdMessage.id);
+    console.log('Response messages:', responseMessages);
     // Extract the trivia question from the response
-    const triviaResponse = responseMessages.find(
-      (message) => message.role === 'assistant'
-    )?.content;
-
-    if (!triviaResponse) {
-      throw new Error('No trivia question found in the response');
-    }
-
-    // console.log(triviaResponse);
+    const triviaResponse = extractTriviaResponse(responseMessages);
+    console.log('Trivia response:', triviaResponse);
+    
     return new NextResponse(JSON.stringify(triviaResponse), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
@@ -104,7 +33,7 @@ export async function POST(req: NextRequest) {
     const errorMessage = error instanceof Error ? error.message : 'Internal Server Error';
 
     return new NextResponse(
-      JSON.stringify({ errorMessage }),
+      JSON.stringify({ error: errorMessage }),
       { status: 500, headers: { 'Content-Type': 'application/json' } }
     );
   }
