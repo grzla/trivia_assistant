@@ -55,15 +55,40 @@ export async function getResponseMessages(threadId: string, afterMessageId: stri
   return response.data;
 }
 
-export function extractTriviaResponse(responseMessages: any[]): string {
+export function extractTriviaResponse(responseMessages: any[]): string | null {
+  
+  /*
   const triviaResponse = responseMessages.find(
     (message) => message.role === 'assistant'
-)?.content;
-// )?.content?.find((content) => content.type === 'text');
+    )?.content?.find((content) => content.type === 'text');
+// )?.content;
+*/
+  // Find the assistant message
+  const triviaResponse = responseMessages.find(
+    (message) => message.role === 'assistant'
+  );
+
+  // Check if assistant message exists and has content
+  if (triviaResponse && triviaResponse.content) {
+    // Find the content with type 'text'
+    const textContent = triviaResponse.content.find((content) => content.type === 'text');
     
+    // Return the text.value if it exists
+    if (textContent && textContent.text && textContent.text.value) {
+      // Parse the JSON string in text.value to get the actual object
+      try {
+        const parsedValue = JSON.parse(textContent.text.value);
+        return JSON.stringify(parsedValue, null, 2); // Return the parsed object as a formatted JSON string
+      } catch (error) {
+        console.error("Failed to parse JSON string in text.value:", error);
+        return null;
+      }
+    }
+  }
+
   if (!triviaResponse) {
     throw new Error('No trivia question found in the response');
   }
 
-  return triviaResponse;
+  // return triviaResponse;
 }
