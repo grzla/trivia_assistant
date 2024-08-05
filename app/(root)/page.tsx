@@ -69,8 +69,8 @@ export default function Home() {
     }
   };
 
-  const handleInputChange = (event: Event) => {
-    event ?? setInput(event.target.value);
+  const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setInput(event.target.value);
   };
 
   function handleKeyDown(e) {
@@ -84,26 +84,27 @@ export default function Home() {
     <main className="fixed h-full w-full flex-col bg-muted">
       <div className="container h-full w-full flex flex-col py-8">
         <div className="flex-1 overflow-y-auto">
-          {triviaData.map((category, index) => (
-            <div key={index}>
-              <h2>{category.category}</h2>
-              <ul>
-                {category.questions.map((question, qIndex) => (
-                  <li key={qIndex}>
-                    <p>
-                      <strong>Difficulty:</strong> {question.difficulty}
-                    </p>
-                    <p>
-                      <strong>Question:</strong> {question.question}
-                    </p>
-                    <p>
-                      <strong>Answer:</strong> {question.answer}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {triviaData &&
+            triviaData.map((category, index) => (
+              <div key={index}>
+                <h2>{category.category}</h2>
+                <ul>
+                  {category.questions.map((question, qIndex) => (
+                    <li key={qIndex}>
+                      <p>
+                        <strong>Difficulty:</strong> {question.difficulty}
+                      </p>
+                      <p>
+                        <strong>Question:</strong> {question.question}
+                      </p>
+                      <p>
+                        <strong>Answer:</strong> {question.answer}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
         </div>
         <form
           ref={formRef}
