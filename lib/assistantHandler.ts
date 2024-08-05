@@ -29,6 +29,7 @@ export async function runAssistant(threadId: string): Promise<Run> {
 }
 
 async function waitForRunCompletion(threadId: string, run: Run): Promise<Run> {
+  console.log(`Waiting for run completion: ${run.id}`);
   while (run.status === 'queued' || run.status === 'in_progress') {
     await new Promise((resolve) => setTimeout(resolve, 500));
     run = await openai.beta.threads.runs.retrieve(threadId, run.id) as Run;

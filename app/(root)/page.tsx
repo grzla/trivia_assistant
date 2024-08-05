@@ -2,7 +2,8 @@
 import { useState, useEffect, useRef } from "react";
 import { Textarea } from "@/components/textarea";
 import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
+import TriviaQuestion from "@/components/TriviaQuestion";
+import { sampleTriviaData } from "@/lib/utils";
 
 // Constants
 const ASSISTANT_ID = process.env.OPENAI_ASSISTANT_ID;
@@ -10,9 +11,14 @@ const ASSISTANT_ID = process.env.OPENAI_ASSISTANT_ID;
 export default function Home() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
-  const [triviaData, setTriviaData] = useState<any[]>([]);
+  // const [triviaData, setTriviaData] = useState<any[]>([]);
+  const [triviaData, setTriviaData] = useState(sampleTriviaData);
 
   const formRef = useRef<HTMLFormElement>(null);
+
+  // useEffect(() => {
+  //   setTriviaData(sampleTriviaData);
+  // }, []);
   /*
   useEffect(() => {
     // Function to fetch trivia questions from the API
@@ -80,31 +86,38 @@ export default function Home() {
     }
   }
 
+  const handleReplace = (index: number) => {
+    // Implement the replace logic here
+    console.log(`Replace question at index ${index}`);
+  };
+
+  const handleEdit = (index: number, newQuestion: string) => {
+    setTriviaData((prevData) => {
+      const newData = [...prevData];
+      newData[index].questions[0].question = newQuestion;
+      return newData;
+    });
+  };
+
   return (
     <main className="fixed h-full w-full flex-col bg-muted">
       <div className="container h-full w-full flex flex-col py-8">
         <div className="flex-1 overflow-y-auto">
-          {triviaData &&
-            triviaData.map((category, index) => (
-              <div key={index}>
-                <h2>{category.category}</h2>
-                <ul>
-                  {category.questions.map((question, qIndex) => (
-                    <li key={qIndex}>
-                      <p>
-                        <strong>Difficulty:</strong> {question.difficulty}
-                      </p>
-                      <p>
-                        <strong>Question:</strong> {question.question}
-                      </p>
-                      <p>
-                        <strong>Answer:</strong> {question.answer}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          {triviaData.categories.map((category, categoryIndex) => (
+            <div key={categoryIndex}>
+              <h2>{category.category}</h2>
+              {category.questions.map((question, questionIndex) => (
+                <TriviaQuestion
+                  key={questionIndex}
+                  index={questionIndex}
+                  question={question.question}
+                  answer={question.answer}
+                  onReplace={handleReplace}
+                  onEdit={handleEdit}
+                />
+              ))}
+            </div>
+          ))}
         </div>
         <form
           ref={formRef}
