@@ -13,7 +13,7 @@ export default function Home() {
   const [triviaData, setTriviaData] = useState<any[]>([]);
 
   const formRef = useRef<HTMLFormElement>(null);
-
+  /*
   useEffect(() => {
     // Function to fetch trivia questions from the API
     const fetchTriviaQuestions = async () => {
@@ -25,7 +25,7 @@ export default function Home() {
           },
           body: JSON.stringify({
             threadId: null,
-            message: "Fetch trivia questions",
+            message: "Go",
           }),
         });
         const data = await response.json();
@@ -38,14 +38,14 @@ export default function Home() {
 
     fetchTriviaQuestions();
   }, []);
-
+*/
   const submitMessage = async (event) => {
     event.preventDefault();
     if (!input) return;
 
     // Add the user's message to the messages list
-    const newMessages = [...messages, { role: "user", content: input }];
-    setMessages(newMessages);
+    const newMessage = [...messages, { role: "user", content: input }];
+    setMessages(newMessage);
 
     try {
       const response = await fetch("/api/assistant", {
@@ -60,7 +60,7 @@ export default function Home() {
 
       // Add the assistant's response to the messages list
       setMessages([
-        ...newMessages,
+        ...newMessage,
         { role: "assistant", content: data.assistantMessage },
       ]);
       setInput("");
@@ -69,11 +69,11 @@ export default function Home() {
     }
   };
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setInput(event.target.value);
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    setInput(e.target.value);
   };
 
-  function handleKeyDown(e) {
+  function handleKeyDown(e: React.KeyboardEvent<HTMLTextAreaElement>) {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       formRef.current?.requestSubmit();
