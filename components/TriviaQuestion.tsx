@@ -6,7 +6,7 @@ interface TriviaQuestionProps {
   question: string;
   answer: string;
   onReplace: (index: number) => void;
-  onEdit: (index: number, newQuestion: string) => void;
+  onEdit: (index: number, newQuestion: string, newAnswer: string) => void;
 }
 
 const TriviaQuestion: React.FC<TriviaQuestionProps> = ({
@@ -18,10 +18,11 @@ const TriviaQuestion: React.FC<TriviaQuestionProps> = ({
 }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [editedQuestion, setEditedQuestion] = useState(question);
+  const [editedAnswer, setEditedAnswer] = useState(answer);
 
   const handleEdit = () => {
     if (isEditing) {
-      onEdit(index, editedQuestion);
+      onEdit(index, editedQuestion, editedAnswer);
     }
     setIsEditing(!isEditing);
   };
@@ -33,18 +34,28 @@ const TriviaQuestion: React.FC<TriviaQuestionProps> = ({
       </div>
       <div className="flex-grow">
         {isEditing ? (
-          <input
-            type="text"
-            value={editedQuestion}
-            onChange={(e) => setEditedQuestion(e.target.value)}
-            className="w-full mb-2 p-2 border rounded"
-          />
+          <>
+            <input
+              type="text"
+              value={editedQuestion}
+              onChange={(e) => setEditedQuestion(e.target.value)}
+              className="w-full mb-2 p-2 border rounded"
+            />
+            <input
+              type="text"
+              value={editedAnswer}
+              onChange={(e) => setEditedAnswer(e.target.value)}
+              className="w-full mb-2 p-2 border rounded"
+            />
+          </>
         ) : (
-          <p className="mb-2">{question}</p>
+          <>
+            <p className="mb-2">{question}</p>
+            <p className="text-sm text-gray-600">
+              <strong>Answer:</strong> {answer}
+            </p>
+          </>
         )}
-        <p className="text-sm text-gray-600">
-          <strong>Answer:</strong> {answer}
-        </p>
       </div>
       <div className="flex-shrink-0 space-y-2">
         <Button onClick={() => onReplace(index)} className="w-full">
